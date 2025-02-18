@@ -1,0 +1,44 @@
+{
+    "origin": ["#intro# #journey# #conflict# #resolution#"],
+    "intro": [
+      "Once upon a time, a #person# set out on a great adventure.",
+      "In the distant #region#, a #person# discovered an ancient secret.",
+      "Long ago, a #person# ventured into the unknown #environment#."
+    ],
+    "journey": [
+      "Through #vegetation# and across #body_of_water#, they traveled with determination.",
+      "Guided by the stars, they crossed vast #land# and treacherous #slope#.",
+      "They journeyed through #season#'s harshest trials, facing #natural_object# and #physical_phenomenon#."
+    ],
+    "conflict": [
+      "But their path was blocked by a fearsome #organism#, guarding a sacred #artifact#.",
+      "Along the way, they encountered a rival #adventurer#, seeking the same #treasure#.",
+      "Dark forces lurked in the shadows, threatening their quest with #military_action#."
+    ],
+    "resolution": [
+      "With courage and wit, they overcame the challenge and uncovered the lost #document#.",
+      "Through sheer determination, they claimed the #treasure# and returned as a hero.",
+      "Though the battle was hard-fought, the #person# emerged victorious, changing history forever."
+    ],
+    "person": ["explorer", "warrior", "adventurer", "traveler", "fighter"],
+    "region": ["wilderness", "kingdom", "desert", "mountains", "islands"],
+    "environment": ["forest", "cave", "ruins", "city", "temple"],
+    "vegetation": ["dense jungle", "ancient woods", "overgrown ruins"],
+    "body_of_water": ["raging river", "stormy ocean", "hidden lake"],
+    "land": ["endless plains", "snowy peaks", "volcanic wasteland"],
+    "slope": ["treacherous cliffs", "rolling hills", "icy slopes"],
+    "season": ["winter", "summer", "autumn", "spring"],
+    "natural_object": ["towering rock formations", "crystal caves", "burning sands"],
+    "physical_phenomenon": ["blinding lightning", "roaring thunder", "swirling mist"],
+    "organism": ["dragon", "gargoyle", "shadow beast", "giant spider"],
+    "artifact": ["golden idol", "mystic tome", "enchanted sword"],
+    "adventurer": ["rogue", "knight", "hunter", "seeker"],
+    "military_action": ["war", "battle", "duel", "skirmish"],
+    "document": ["ancient map", "forgotten scroll", "royal decree"],
+    "treasure": ["legendary gem", "hidden fortune", "sacred relic"],
+    "image":["<svg width='200' height='400' viewBox='0 0 200 400' xmlns='http://www.w3.org/2000/svg'><polygon points='90,50 110,50 130,300 70,300' fill='silver' stroke='gray' stroke-width='3'/><line x1='100' y1='50' x2='100' y2='300' stroke='darkgray' stroke-width='2'/><rect x='50' y='300' width='100' height='15' fill='gold' stroke='black' stroke-width='2'/><rect x='90' y='315' width='20' height='60' fill='brown' stroke='black' stroke-width='2'/><circle cx='100' cy='380' r='15' fill='gold' stroke='black' stroke-width='3'/></svg>",
+    "<svg width='300' height='200' viewBox='0 0 300 200' xmlns='http://www.w3.org/2000/svg'><rect x='10' y='10' width='280' height='180' fill='tan' stroke='brown' stroke-width='3' rx='15'/><path d='M40,160 Q100,50 180,130 T260,50' fill='none' stroke='black' stroke-width='3' stroke-dasharray='8,8'/><line x1='250' y1='40' x2='270' y2='60' stroke='red' stroke-width='5'/><line x1='270' y1='40' x2='250' y2='60' stroke='red' stroke-width='5'/><circle cx='100' cy='60' r='10' fill='brown'/><circle cx='200' cy='140' r='10' fill='brown'/></svg>",
+    "<svg width='200' height='250' viewBox='0 0 200 250' xmlns='http://www.w3.org/2000/svg'><rect x='30' y='50' width='100' height='140' rx='10' fill='saddlebrown' stroke='black' stroke-width='3'/><path d='M125,80 Q200,100 125,150' fill='none' stroke='saddlebrown' stroke-width='13'/><ellipse cx='80' cy='50' rx='50' ry='25' fill='white'/><circle cx='60' cy='40' r='15' fill='white'/></svg>",
+    "<svg width='250' height='250' viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'><circle cx='125' cy='125' r='100' fill='gray' stroke='black' stroke-width='5'/><circle cx='125' cy='125' r='85' fill='saddlebrown' stroke='peru' stroke-width='4'/><line x1='80' y1='40' x2='80' y2='210' stroke='black' stroke-width='3' opacity='0.5'/><line x1='125' y1='30' x2='125' y2='220' stroke='black' stroke-width='3' opacity='0.5'/><line x1='170' y1='40' x2='170' y2='210' stroke='black' stroke-width='3' opacity='0.5'/><circle cx='125' cy='125' r='30' fill='silver' stroke='black' stroke-width='3'/></svg>"]
+  }
+  

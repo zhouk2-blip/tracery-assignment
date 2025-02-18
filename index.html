@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracery Story Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="p5.min.js"></script>
+    <script src="tracery.min.js"></script>
+</head>
+<body>
+    <h1>Adventure!</h1>
+    <div id="image-container"></div>
+    <p id="story">Loading story...</p>
+    
+    <script>
+        let grammar;
+        let particles = [];
+
+        class Particle {
+            constructor(text, x, y) {
+                this.text = text;
+                this.x = x;
+                this.y = y;
+                this.speed = random(1, 5);
+            }
+
+            move() {
+                this.y += this.speed;
+                if (this.y > height) {
+                    this.y = height;
+                }
+            }
+
+            display() {
+                text(this.text, this.x, this.y, width*0.1 , height*0.1);
+            }
+        }
+
+        function setup() {
+            createCanvas(windowWidth, windowHeight);
+            textSize(24);
+            textAlign(CENTER, CENTER);
+            fill(255);
+            $.getJSON("story.json", function(data) {
+                grammar = tracery.createGrammar(data);
+                generateStory();
+                setInterval(generateStory, 2000); 
+            });
+            setInterval(changeColors, 5000);
+        }
+
+        function generateStory() {
+            if (grammar) {
+                let story = grammar.flatten("#origin#");
+                let svgImage = grammar.flatten("#image#");
+                $("#story").text(story);
+                $("#image-container").html(svgImage);  
+            }
+        }
+        function changeColors() {
+            const colors = [
+                { background: '#1a1a1a', text: '#f0e68c', heading: '#ff4500', border: '#f0e68c', storyBg: '#333333' },
+                { background: '#2e8b57', text: '#ffffff', heading: '#ff6347', border: '#ffffff', storyBg: '#4682b4' },
+                { background: '#8b4513', text: '#ffd700', heading: '#ff4500', border: '#ffd700', storyBg: '#2f4f4f' },
+                { background: '#000080', text: '#f0e68c', heading: '#ff4500', border: '#f0e68c', storyBg: '#696969' }
+            ];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.documentElement.style.setProperty('--background-color', randomColor.background);
+            document.documentElement.style.setProperty('--text-color', randomColor.text);
+            document.documentElement.style.setProperty('--heading-color', randomColor.heading);
+            document.documentElement.style.setProperty('--border-color', randomColor.border);
+            document.documentElement.style.setProperty('--story-bg-color', randomColor.storyBg);
+        }
+        function draw() {
+            background(0, 100);
+            for (let particle of particles) {
+                particle.move();
+                particle.display();
+        }}
+
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+        }
+
+        function mousePressed() {
+            let x = mouseX;
+            let y = mouseY
+            let words = grammar.flatten("#person# VS #organism#")
+            particles.push(new Particle(words, x, y));
+        }
+    </script>
+</body>
+</html>
